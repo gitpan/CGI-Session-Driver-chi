@@ -1,0 +1,6 @@
+Revision history for Perl extension CGI::Session::Driver::CHI.
+
+0.01  Thu May 23 00:59:57 2013
+	- original version; created by h2xs 1.23 with options
+		-XAn CGI::Session::Driver::CHI
+
