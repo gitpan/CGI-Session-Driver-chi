@@ -4,5 +4,3 @@ MANIFEST
 README
 t/CGI-Session-Driver-chi.t
 lib/CGI/Session/Driver/chi.pm
-META.yml                                 Module YAML meta-data (added by MakeMaker)
-META.json                                Module JSON meta-data (added by MakeMaker)

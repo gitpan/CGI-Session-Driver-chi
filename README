@@ -1,40 +1,39 @@
-CGI-Session-Driver-CHI version 0.01
-===================================
+NAME
+    CGI::Session::Driver::chi
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any maCHIne dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+SYNOPSIS
+    $s = CGI::Session->new( "driver:chi", $sid, { driver => 'File', root_dir
+    => '/path/to/root' });
 
-A README file is required for CPAN modules since CPAN extracts the
-README file from a module distribution so that people browsing the
-arCHIve can use it get an idea of the modules uses. It is usually a
-good idea to provide version information here so that people can
-decide whether fixes for the module are worth downloading.
+    $s = CGI::Session->new( "driver:chi", $sid, { chi_class => 'My::CHI',
+    namespace => 'cgi', });
 
-INSTALLATION
+DESCRIPTION
+    This driver allows CGI::Session to use CHI as a session store
 
-To install this module type the following:
+  DRIVER ARGUMENTS
+    It accept a hash ref with the same arguements to would pass to CHI
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+    An additional arguement chi_class
 
-DEPENDENCIES
+AUTHOR
+    James Rouzier. <rouzier@gmail.com>
 
-This module requires these other modules and libraries:
+COPYRIGHT
+    Copyright (C) 2013 James Rouzier
 
-  blah blah blah
+LICENSE
+    This program is free software; you can redistribute it and/or modify it
+    under the terms of the GNU General Public License as published by the
+    Free Software Foundation; either version 2 of the License, or (at your
+    option) any later version.
 
-COPYRIGHT AND LICENCE
+    This program is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
+    Public License for more details.
 
-Put the correct copyright and licence information here.
-
-Copyright (C) 2013 by root
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.10.1 or,
-at your option, any later version of Perl 5 you may have available.
-
+    You should have received a copy of the GNU General Public License along
+    with this program; if not, write to the Free Software Foundation, Inc.,
+    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 

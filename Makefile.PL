@@ -5,8 +5,8 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME              => 'CGI::Session::Driver::chi',
     VERSION_FROM      => 'lib/CGI/Session/Driver/chi.pm', # finds $VERSION
-    PREREQ_PM         => {}, # e.g., Module::Name => 1.1
+    PREREQ_PM         => { CHI => 0}, # e.g., Module::Name => 1.1
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT       => 'A CGI::Session::Driver for CHI', # retrieve abstract from module
-       AUTHOR         => 'root <root@localdomain>') : ()),
+       AUTHOR         => 'James Rouzier <rouzier@gmail.com>') : ()),
 );
