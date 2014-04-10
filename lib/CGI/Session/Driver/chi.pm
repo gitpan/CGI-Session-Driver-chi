@@ -44,7 +44,7 @@ use strict;
 use CHI;
 use base qw( CGI::Session::Driver CGI::Session::ErrorHandler );
 
-our $VERSION = '1.0.1';
+our $VERSION = '1.0.2';
 
 sub init {
     my ($self) = @_;
