@@ -44,7 +44,7 @@ use strict;
 use CHI;
 use base qw( CGI::Session::Driver CGI::Session::ErrorHandler );
 
-our $VERSION = '1.0.2';
+our $VERSION = '1.0.3';
 
 sub init {
     my ($self) = @_;
@@ -52,21 +52,26 @@ sub init {
     my $chi_class = delete $args{chi_class} || "CHI";
     my $chi = $chi_class->new(%args);
     $self->{CHI} = $chi;
+    return 1;
 }
 
 sub store {
     my ($self, $sid, $datastr) = @_;
-    return $self->{CHI}->set($sid, $datastr);
+    $self->{CHI}->set($sid, $datastr);
+    return 1;
 }
 
 sub retrieve {
     my ($self, $sid) = @_;
-    return $self->{CHI}->get($sid);
+    my $value = $self->{CHI}->get($sid);
+    return 0 unless defined $value;
+    return $value;
 }
 
 sub remove {
     my ($self, $sid) = @_;
-    return $self->{CHI}->remove($sid);
+    $self->{CHI}->remove($sid);
+    return 1;
 }
 
 sub traverse {
@@ -74,6 +79,7 @@ sub traverse {
     foreach my $key ($self->{CHI}->get_keys) {
         $coderef->( $key )
     }
+    return 1;
 }
 
 =head1 AUTHOR
